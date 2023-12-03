@@ -1,0 +1,29 @@
+<div class="dialog" id="request-dialog" aria-labelledby="request-dialog-title" aria-hidden="true">
+    <!-- 2. The dialog overlay -->
+    <div class="dialog__owerlay" data-ally-dialog-hide></div>
+    <!-- 3. The actual dialog --> 
+    <div class="dialog__body" role="document">
+        <!-- 4. The close button --> 
+        <button class="dialog__close reset-btn" data-ally-dialog-hide aria-label="Закрыть окно">
+            &times;
+        </button>
+        <!-- 5. The dialog title --> 
+    <h2 class="dialog__title h2" id="request-dialog-title">Получить скидку</h2>
+    <!-- 6. Dialog content --> 
+    <form class="request-dialog__form form"> 
+        <div class="form__group"> 
+            <label class="form__label" for="request-dialog-name">Имя</label> 
+            <input class="form__control form__control__error" type="text" id="request-dialog-name" name="name"> 
+            <span class="form__error">Ошибка</span>
+        </div> 
+        <div class="form__group"> 
+            <label class="form__label" for="request-dialog-email">Email</label> 
+            <input class="form__control form__control__error" type="text" id="request-dialog-email" name="email"> 
+            <span class="form__error">Ошибка</span>
+        </div> 
+        <div class="form__group">
+            <button class="form__submit btn reset-btn" type="submit">Отправить</button>
+        </div>
+    </form> 
+    </div>
+</div>

@@ -3,59 +3,215 @@
     padding: 0;
     box-sizing: inherit;
 }
-picture{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    line-height: 0;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: flex-end;
+
+a{
+    text-decoration: none;
 }
 
 //БЛОКИ С ВЫБОРОМ МУЖ ОДЕЖДА ИЛИ ЖЕН
-.gender{
+.choice{
+    background-color: #F9F9F9;
+    &__container{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.gender h1{
-    margin: 0;
-}
-.male{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    flex-direction: column;
-    font-family: Montserrat;
-    color: white;   
-    background: linear-gradient(192deg, #e7e8e727 10.21%, rgba(231, 232, 231, 0.00) 105.17%),
-    linear-gradient(0deg, #1E180C -15.03%, rgba(83, 79, 70, 0.00) 100%),
-    url(/assets/images/man.png);
-    width: 960px;
-    height: 805px;
-}
-.female{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    font-family: Montserrat;
-    background: linear-gradient(192deg, #e7e8e727 10.21%, rgba(231, 232, 231, 0.00) 105.17%),
-    linear-gradient(0deg, #1E180C -15.03%, rgba(83, 79, 70, 0.00) 100%),
-    url(/assets/images/woman.png);
-    width: 960px;
-    height: 805px;
-    background-size: 960px 805px;
-}
-.gender hr{
-    border:none;
-    background-color: #FFF;
-    width: 150px;
-    height: 3px;
-    align-self: flex-start;
+    }
+
+    &__male{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+        width: 960px;
+        height: 805px;
+        font-family: Montserrat;
+        color: white;   
+        background: linear-gradient(192deg, #e7e8e727 10.21%, rgba(231, 232, 231, 0.00) 105.17%),
+        linear-gradient(0deg, #1E180C -15.03%, rgba(83, 79, 70, 0.00) 100%),
+        url(/assets/images/man.png);
+    }
+    &__female{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 960px;
+        height: 805px;
+        font-family: Montserrat;
+        color: white;
+        background: linear-gradient(192deg, #e7e8e727 10.21%, rgba(231, 232, 231, 0.00) 105.17%),
+        linear-gradient(0deg, #1E180C -15.03%, rgba(83, 79, 70, 0.00) 100%),
+        url(/assets/images/woman.png);
+        background-size: 960px 805px;
+    }
+    hr{
+        margin-top: -20px;
+        width: 200px;
+        align-self: flex-start;
+        height: 3px;
+        border:none;
+        background-color: #FFF;
+    }
+    .choice h1{
+        margin: 0;
+    }
+
+    .choice picture{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        width: 100%;
+        height: 100%;
+        line-height: 0;
+    }
 }
 
 //БРЕНДЫ
+.brands{
+    background-color: #F9F9F9;
+    &__container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    }
+
+    &__names{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        &__BR{
+            width: 195px;
+            height: 117px;
+        }
+        &__KI{
+            width: 180px;
+            height: 95px;
+        }
+        &__SAI{
+            width: 188px;
+            height: 86px;
+        }
+        &__LO{
+            width: 216px;
+            height: 52px;
+        }
+        &__JA{
+            width: 170px;
+            height: 71px;
+        }
+        &__SAN{
+            width: 187px;
+            height: 88px;
+        }
+    }
+}
+
+//ДЛЯ СЛЕДУЮЩЕГО БЛОКА
+.backround{
+    &__container{
+    background-color:#F9F9F9;
+    height: 160px;
+    }
+}
+
+//КОЛЛЕКЦИЯ
+.collection{
+    display: flex;
+    justify-content: center;
+    background-color:#fcfcfc;
+    &__container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 1530px;
+        height: 883px;
+        background-color: white;
+        margin-top: -136px;
+        flex-wrap: wrap;
+    }
+
+    &__models{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &__block{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 420px;
+            margin: 0 20px;
+
+            &__text{
+                margin-top: 30px;
+                text-align: center;
+            }
+        }
+    }
+    &__images{
+        width: 420px;
+        height: 536px;
+    }
+}
+
+//НОВИНКИ
+.new{
+    background-color: #fcfcfc;
+    padding-bottom: 30px;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__text{
+            margin-top: -30px;
+            color: #1e180c72;
+        }
+    }
+
+    &__models{
+        display: flex;
+        align-items: center;
+        &__block{
+            background-color: #FFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+            
+            &__text{
+                margin-top: 20px;
+            }
+        }
+    }
+
+
+    &__image1{
+        width: 340px;
+        height: auto;
+    }
+    &__image2{
+        width: 310px;
+        height: auto;
+    }
+    &__image3{
+        width: 270px;
+        height: auto;
+    }
+}
+
+.linebot{
+    background-color: #E53030;
+    height: 2px;
+}

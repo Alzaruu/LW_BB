@@ -1,0 +1,23 @@
+button{
+    padding: 15px 40px;
+    border: none;
+    border-bottom: 1px solid #1E180C;
+    cursor: pointer;
+    }
+.but{
+    &__one{
+        margin-top: 30px;
+        background-color: #F9F9F9;
+    }
+    &__two{
+        margin-top: 30px;
+        background-color: #FFF;
+    }
+    &__three{
+        margin-top: 30px;
+        background-color:#fcfcfc;
+    }
+}
+button:hover{
+    background: linear-gradient(rgba(255, 255, 255, 0.452), rgba(0, 0, 0, 0.266));
+}
