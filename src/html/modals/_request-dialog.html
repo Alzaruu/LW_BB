@@ -4,26 +4,25 @@
     <!-- 3. The actual dialog --> 
     <div class="dialog__body" role="document">
         <!-- 4. The close button --> 
-        <button class="dialog__close reset-btn" data-ally-dialog-hide aria-label="Закрыть окно">
+        <button class="dialog__close but but__close reset-btn" data-ally-dialog-hide aria-label="Закрыть окно">
             &times;
         </button>
         <!-- 5. The dialog title --> 
     <h2 class="dialog__title h2" id="request-dialog-title">Получить скидку</h2>
     <!-- 6. Dialog content --> 
     <form class="request-dialog__form form"> 
-        <div class="form__group"> 
-            <label class="form__label" for="request-dialog-name">Имя</label> 
-            <input class="form__control form__control__error" type="text" id="request-dialog-name" name="name"> 
-            <span class="form__error">Ошибка</span>
+        <div class="request-dialog__form__group"> 
+          <!--  <label class="request-dialog__form__label" for="request-dialog-name">Имя</label> -->
+            <input class="request-dialog__form__control request-dialog__form__control__error" type="text" id="request-dialog-name" name="name" placeholder="Имя"> 
         </div> 
-        <div class="form__group"> 
-            <label class="form__label" for="request-dialog-email">Email</label> 
-            <input class="form__control form__control__error" type="text" id="request-dialog-email" name="email"> 
-            <span class="form__error">Ошибка</span>
+        <div class="request-dialog__form__group"> 
+           <!-- <label class="request-dialog__form__label" for="request-dialog-email">Email</label> -->
+            <input class="request-dialog__form__control request-dialog__form__control__error" type="text" id="request-dialog-email" name="email" placeholder="Email"> 
         </div> 
-        <div class="form__group">
-            <button class="form__submit btn reset-btn" type="submit">Отправить</button>
+        <div class="request-dialog__form__group">
+            <button class="request-dialog__form__submit but but__reset-but" type="submit">Отправить</button>
         </div>
+        <span class="request-dialog__form__text">Нажимая на кнопку, вы принимаете Положение и Согласие на обработку персональных данных</span>
     </form> 
     </div>
 </div>

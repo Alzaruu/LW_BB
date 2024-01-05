@@ -1,36 +1,25 @@
-*,*::after,*::before {
-    margin: 50;
+*,
+*::after,
+*::before {
     padding: 0;
     box-sizing: inherit;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 //БЛОКИ С ВЫБОРОМ МУЖ ОДЕЖДА ИЛИ ЖЕН
-.choice{
+.choice {
     background-color: #F9F9F9;
-    &__container{
+    &__group{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
     }
 
-    &__male{
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        flex-direction: column;
-        width: 960px;
-        height: 805px;
-        font-family: Montserrat;
-        color: white;   
-        background: linear-gradient(192deg, #e7e8e727 10.21%, rgba(231, 232, 231, 0.00) 105.17%),
-        linear-gradient(0deg, #1E180C -15.03%, rgba(83, 79, 70, 0.00) 100%),
-        url(/assets/images/man.png);
-    }
-    &__female{
+    &__male {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -40,23 +29,39 @@ a{
         font-family: Montserrat;
         color: white;
         background: linear-gradient(192deg, #e7e8e727 10.21%, rgba(231, 232, 231, 0.00) 105.17%),
-        linear-gradient(0deg, #1E180C -15.03%, rgba(83, 79, 70, 0.00) 100%),
-        url(/assets/images/woman.png);
+            linear-gradient(0deg, #1E180C -15.03%, rgba(83, 79, 70, 0.00) 100%),
+            url(/assets/images/man.png);
+    }
+
+    &__female {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 960px;
+        height: 805px;
+        font-family: Montserrat;
+        color: white;
+        background: linear-gradient(192deg, #e7e8e727 10.21%, rgba(231, 232, 231, 0.00) 105.17%),
+            linear-gradient(0deg, #1E180C -15.03%, rgba(83, 79, 70, 0.00) 100%),
+            url(/assets/images/woman.png);
         background-size: 960px 805px;
     }
-    hr{
+
+    hr {
         margin-top: -20px;
         width: 200px;
         align-self: flex-start;
         height: 3px;
-        border:none;
+        border: none;
         background-color: #FFF;
     }
-    .choice h1{
+
+    .choice h1 {
         margin: 0;
     }
 
-    .choice picture{
+    .choice picture {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -69,42 +74,49 @@ a{
 }
 
 //БРЕНДЫ
-.brands{
+.brands {
     background-color: #F9F9F9;
-    &__container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
+    transition: all 0.5s ease-in-out;
+
+    &__group {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
-    &__names{
+    &__names {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
-        &__BR{
+
+        &__BR {
             width: 195px;
             height: 117px;
         }
-        &__KI{
+
+        &__KI {
             width: 180px;
             height: 95px;
         }
-        &__SAI{
+
+        &__SAI {
             width: 188px;
             height: 86px;
         }
-        &__LO{
+
+        &__LO {
             width: 216px;
             height: 52px;
         }
-        &__JA{
+
+        &__JA {
             width: 170px;
             height: 71px;
         }
-        &__SAN{
+
+        &__SAN {
             width: 187px;
             height: 88px;
         }
@@ -112,19 +124,20 @@ a{
 }
 
 //ДЛЯ СЛЕДУЮЩЕГО БЛОКА
-.backround{
-    &__container{
-    background-color:#F9F9F9;
-    height: 160px;
+.backround {
+    &__container {
+        background-color: #F9F9F9;
+        height: 160px;
     }
 }
 
 //КОЛЛЕКЦИЯ
-.collection{
+.collection {
     display: flex;
     justify-content: center;
-    background-color:#fcfcfc;
-    &__container{
+    background-color: #fcfcfc;
+
+    &__group {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -135,83 +148,192 @@ a{
         flex-wrap: wrap;
     }
 
-    &__models{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        &__block{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 420px;
-            margin: 0 20px;
-
-            &__text{
-                margin-top: 30px;
-                text-align: center;
-            }
-        }
-    }
-    &__images{
+    &__images {
         width: 420px;
         height: 536px;
     }
 }
+.models {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 420px;
+        margin: 0 20px;
+
+        &_text {
+            margin-top: 30px;
+            text-align: center;
+        }
+    }
+}
 
 //НОВИНКИ
-.new{
+.new {
     background-color: #fcfcfc;
     padding-bottom: 30px;
-    &__container{
+    &__title {
         display: flex;
         flex-direction: column;
         align-items: center;
-        flex-wrap: wrap;
-    }
 
-    &__title{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &__text{
+        &__text {
             margin-top: -30px;
             color: #1e180c72;
         }
     }
 
-    &__models{
-        display: flex;
-        align-items: center;
-        &__block{
-            background-color: #FFF;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0 20px;
-            
-            &__text{
-                margin-top: 20px;
-            }
-        }
+    &__but {
+        margin: 50px auto;
     }
 
 
-    &__image1{
+    &__image1 {
         width: 340px;
         height: auto;
     }
-    &__image2{
+
+    &__image2 {
         width: 310px;
         height: auto;
     }
-    &__image3{
+
+    &__image3 {
         width: 270px;
         height: auto;
     }
+
+}
+.slider {
+    &__nav {
+        position: absolute;
+        top: 70%;
+        left: 40%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__prev,
+    &__next {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 63px;
+        height: 63px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        z-index: 1000;
+    }
+
+    &__block {
+        background-color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 20px;
+
+        &_text {
+            margin-top: 20px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__pagination {
+        position: relative;
+        top: 30px;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 4px;
+        width: 100%;
+        transform: translateX(-50%);
+    }
+
+    &__page {
+        position: relative;
+        width: 100px;
+        height: 16px;
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: rgb(0 0 0 / 0.1);
+            transform: translateY(-50%);
+            content: '';
+        }
+    }
+}
+.swiper-button-next::after, 
+.swiper-button-prev::after { 
+    content: ""; 
 }
 
-.linebot{
+//СКИДКИ
+.sales {
+    padding: 30px;
+    &__group {
+        width: 1515px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: #d8d7d3;
+    }
+
+    &__title {
+        position: absolute;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_first {
+            margin-bottom: 0;
+        }
+
+        &_second {
+            margin-top: 0;
+        }
+    }
+
+    &__backround {
+        display: flex;
+
+        &_left {
+            height: 400px;
+            width: 740px;
+            background-image: url(../assets/images/manSales.jpg);
+            background-repeat: no-repeat;
+        }
+
+        &_right {
+            height: 400px;
+            width: 1100px;
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            background-image: url(../assets/images/womanSales.jpg);
+            background-size: 96%;
+        }
+    }
+}
+
+.linebot {
     background-color: #E53030;
     height: 2px;
 }

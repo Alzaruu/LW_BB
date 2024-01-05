@@ -3,8 +3,10 @@ button{
     border: none;
     border-bottom: 1px solid #1E180C;
     cursor: pointer;
-    }
+    transition: all 0.5s ease-in-out;
+}
 .but{
+    transition: all 0.5s ease-in-out;
     &__one{
         margin-top: 30px;
         background-color: #F9F9F9;
@@ -14,10 +16,34 @@ button{
         background-color: #FFF;
     }
     &__three{
-        margin-top: 30px;
+        display: flex;
         background-color:#fcfcfc;
     }
+    &__four{
+        margin: 80px;
+        color: white;
+        background-color: #1E180C;
+    }
+    &__reset-but{
+        margin: 10px;
+        color: white;
+        background-color: #1E180C;
+    }
 }
-button:hover{
+button:not(.but__four, .but__reset-but, .but__close, .reset-btn):hover{
     background: linear-gradient(rgba(255, 255, 255, 0.452), rgba(0, 0, 0, 0.266));
+}
+.but__four:hover{
+    color: #1E180C;
+    background-color: #FFF;
+    border: 1px solid #1E180C;
+}
+.but__reset-but:hover{
+    color: #1E180C;
+    background-color: #FFF;
+    outline: 1px solid #1E180C;
+}
+.but__close:hover{
+    color: #FFF;
+    background-color: #1E180C;
 }
