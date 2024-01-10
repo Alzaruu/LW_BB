@@ -6,7 +6,6 @@ button{
     transition: all 0.5s ease-in-out;
 }
 .but{
-    transition: all 0.5s ease-in-out;
     &__one{
         margin-top: 30px;
         background-color: #F9F9F9;
@@ -24,13 +23,23 @@ button{
         color: white;
         background-color: #1E180C;
     }
+    &__five{
+        margin-bottom: 40px;
+        background-color: white;
+    }
     &__reset-but{
         margin: 10px;
         color: white;
         background-color: #1E180C;
     }
 }
-button:not(.but__four, .but__reset-but, .but__close, .reset-btn):hover{
+/*.but:not(.but__four, .but__reset-but, .but__close):hover{
+    background: linear-gradient(rgba(255, 255, 255, 0.452), rgba(0, 0, 0, 0.266));
+}*/
+.but__one:hover,
+.but__two:hover,
+.but__three:hover,
+.but__five:hover{
     background: linear-gradient(rgba(255, 255, 255, 0.452), rgba(0, 0, 0, 0.266));
 }
 .but__four:hover{
@@ -46,4 +55,36 @@ button:not(.but__four, .but__reset-but, .but__close, .reset-btn):hover{
 .but__close:hover{
     color: #FFF;
     background-color: #1E180C;
+}
+.butt__first:hover{
+    border-color: rgb(212, 212, 212);
+    color: rgb(212, 212, 212);
+}
+.butt__second:hover{
+    color: black;
+    border-bottom: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient( rgba(99, 98, 98, 0.437),rgba(255, 255, 255, 0.659));
+}
+.bttn__first:hover{
+    border-color: #1e180c9c;
+    color: #1e180c9c;
+}
+.bttn__second:hover{
+    color: black;
+    border-bottom: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient( rgba(99, 98, 98, 0.437),rgba(255, 255, 255, 0.659));
+}
+.info__butn:hover{
+    color: black;
+    border-bottom: 1px solid black;
+    border-radius: 20px;
+    background: linear-gradient( rgba(99, 98, 98, 0.437),rgba(255, 255, 255, 0.659));
+}
+.data__butn:hover{
+    color: #1E180C;
+    background-color: #FFF;
+    border-bottom: none;
+    outline: 1px solid #1E180C;
 }

@@ -12,7 +12,9 @@ const initSlider = () => {
             prevEl: '.slider__prev', 
         }, 
         pagination:{
-            
+            el: '.slider__pagination',
+            type: 'bullets',
+            clickable: true,
         }
     }); 
 } 
