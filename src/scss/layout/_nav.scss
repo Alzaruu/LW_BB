@@ -1,11 +1,14 @@
-*,*::after,*::before {
+*,
+*::after,
+*::before {
     margin: 50;
     padding: 0;
     box-sizing: inherit;
 }
-.nav{
+
+.nav {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
     flex-grow: initial;
     flex-wrap: wrap;
@@ -17,7 +20,7 @@
         cursor: pointer;
     }
 
-    &__search{
+    &__search {
         padding: 10px 5px 10px 40px;
         background-position-y: center;
         flex-grow: 0.5;
@@ -27,17 +30,16 @@
         background-size: auto 50%;
         background-position: 10px;
     }
-
-
 }
 
-input{
+input {
     height: 20px;
     border-color: white;
     border-style: none;
     outline: none;
 }
-picture{
+
+picture {
     display: flex;
     width: 100%;
     height: 100%;
@@ -48,19 +50,20 @@ picture{
     align-content: flex-end;
 }
 
-.delivery{
+.delivery {
     cursor: pointer;
 }
-.blocc{
+
+.blocc {
     margin-top: 30px;
 }
 
-.korz{
+.korz {
     position: relative;
     margin-top: 30px;
 }
 
-.elipse{
+.elipse {
     position: absolute;
     bottom: 0;
     right: -5px;
@@ -72,4 +75,90 @@ picture{
     color: white;
     background-color: #E53030;
     border-radius: 50%;
+}
+
+
+
+//ВЫБОР КАТЕГОРИИ
+
+.category{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 10000;
+
+    &[aria-hidden="true"] {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(0 0 0 / 0.5);
+        cursor: pointer;
+    }
+
+    &__body{
+        position: relative;
+        width: 1600px;
+        height: 1100px;
+        padding-left: 70px;
+        background-color: white;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        padding-bottom: 10px;
+    }
+
+    &__butn {
+        padding: 10px;
+        margin-right: 40px;
+        height: 20px;
+        width: 100px;
+        background-color: white;
+        border-bottom: 1px solid black;
+    }
+}
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blocks {
+    margin: 10px;
+    width: 360px;
+    height: 160px;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &__text {
+        position: absolute;
+        margin-left: 50px;
+        margin-top: 70px;
+        font-size: 20px;
+        font-weight: bold;
+        z-index: 10;
+    }
+
+    &__textWhite {
+        color: rgb(255, 255, 255);
+    }
+
+    &__img {
+        object-fit: cover;
+        z-index: 0;
+    }
 }

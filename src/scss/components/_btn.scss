@@ -88,3 +88,7 @@ button{
     border-bottom: none;
     outline: 1px solid #1E180C;
 }
+.category__butn:hover{
+    border-radius: 20px;
+    background: linear-gradient( rgba(99, 98, 98, 0.437),rgba(255, 255, 255, 0.659));
+}

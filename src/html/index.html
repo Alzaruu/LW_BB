@@ -36,14 +36,17 @@
     <!-- Main -->
     <main class="main">
         <!-- ВЫБОР КАТЕГОРИИ -->
-        <section class="choice">
-            <div class="choice__group">
-                <div class="choice__male">
-                    <h1>МУЖСКОЕ</h1>
+        <section class="choice container">
+
+            <div class="choice">
+                <div class="choice__male male">
+                    <img class="male__img" src="../assets/images/man.jpg" alt="">
+                    <h1 class="male__text">МУЖСКОЕ</h1>
                     <hr>
                 </div>
-                <div class="choice__female">
-                    <h1>ЖЕНСКОЕ</h1>
+                <div class="choice__female female">
+                    <img src="../assets/images/woman.jpg" alt="" class="female__img">
+                    <h1 class="female__text">ЖЕНСКОЕ</h1>
                     <hr>
                 </div>
             </div>
@@ -224,7 +227,7 @@
                     <div class="sales__backround">
                         <div class="sales__backround_left"></div>
                         <div class="sales__backround_right">
-                            <button class="sales__but but but__four" type="button">Получить скидку</button>
+                            <button class="sales__but but but__four" type="button" data-a11y-dialog-show="dialog-request">Получить скидку</button>
                         </div>
                     </div>
                 </div>
@@ -412,6 +415,8 @@
                 </div>
             </div>
         </section>
+
+
         <hr class="linebot">
     </main>
     <!-- End Main -->
